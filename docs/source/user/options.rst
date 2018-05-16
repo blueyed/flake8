@@ -385,10 +385,10 @@ Options and their Descriptions
 
     :ref:`Go back to index <top>`
 
-    Specify a list of codes to ignore. The list is expected to be
-    comma-separated, and does not need to specify an error code exactly.
-    Since |Flake8| 3.0, this **can** be combined with :option:`--select`. See
-    :option:`--select` for more information.
+    Specify a list of :ref:`codes<error_codes>` to ignore.
+    The list is expected to be comma-separated, and does not need to specify an
+    error code exactly.
+    Since |Flake8| 3.0, this **can** be combined with :option:`--select`.
 
     For example, if you wish to only ignore ``W234``, then you can specify
     that. But if you want to ignore all codes that start with ``W23`` you
@@ -454,10 +454,11 @@ Options and their Descriptions
 
     :ref:`Go back to index <top>`
 
-    Specify the list of error codes you wish |Flake8| to report. Similarly to
-    :option:`--ignore`. You can specify a portion of an error code to get all
-    that start with that string. For example, you can use ``E``, ``E4``,
-    ``E43``, and ``E431``.
+    Specify the list of :ref:`error codes<error_codes>` you wish |Flake8| to
+    report.
+    Similar to :option:`--ignore` you can specify a portion of an error code to
+    select those starting with that string.
+    For example, you can use ``E``, ``E4``, ``E43``, and ``E431``.
 
     This defaults to: E,F,W,C
 
@@ -475,8 +476,7 @@ Options and their Descriptions
         flake8 --select=E --ignore=E432 dir/
 
     This will report all codes that start with ``E``, but ignore ``E432``
-    specifically. This is more flexibly than the |Flake8| 2.x and 1.x used
-    to be.
+    specifically.
 
     This **can** be specified in config files.
 
